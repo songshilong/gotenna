@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="48.0dip" android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/lytFields" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <EditText android:id="@id/etDay" android:layout_width="wrap_content" android:hint="DD" android:layout_weight="1.0" style="@style/DtgInputEditText" />
+        <View android:layout_width="8.0dip" android:layout_height="0.0dip" />
+        <EditText android:id="@id/etHour" android:layout_width="wrap_content" android:hint="HH" android:layout_weight="1.0" style="@style/DtgInputEditText" />
+        <View android:layout_width="8.0dip" android:layout_height="0.0dip" />
+        <EditText android:id="@id/etMinute" android:layout_width="wrap_content" android:hint="MM" android:layout_weight="1.0" style="@style/DtgInputEditText" />
+        <View android:layout_width="8.0dip" android:layout_height="0.0dip" />
+        <EditText android:id="@id/etMonth" android:layout_width="wrap_content" android:hint="MON" android:maxLength="3" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ" android:layout_weight="1.0" android:inputType="textCapCharacters" style="@style/DtgInputEditText" />
+        <View android:layout_width="8.0dip" android:layout_height="0.0dip" />
+        <EditText android:id="@id/etYear" android:layout_width="wrap_content" android:hint="YY" android:layout_weight="1.0" android:imeOptions="actionDone" style="@style/DtgInputEditText" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_dtg_input_label_zulu" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/lytFields" />
+</androidx.constraintlayout.widget.ConstraintLayout>

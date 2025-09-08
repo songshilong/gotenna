@@ -1,0 +1,1626 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "27b4cd9ae5927176e0999e93f330901b",
+    "entities": [
+      {
+        "tableName": "DataPackEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `deploymentPackId` INTEGER NOT NULL, `fileLocation` TEXT NOT NULL, `name` TEXT NOT NULL, `fileSize` INTEGER NOT NULL, FOREIGN KEY(`deploymentPackId`) REFERENCES `DeploymentPackEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deploymentPackId",
+            "columnName": "deploymentPackId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileLocation",
+            "columnName": "fileLocation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileSize",
+            "columnName": "fileSize",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_DataPackEntity_deploymentPackId",
+            "unique": false,
+            "columnNames": [
+              "deploymentPackId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_DataPackEntity_deploymentPackId` ON `${TABLE_NAME}` (`deploymentPackId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DeploymentPackEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "deploymentPackId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "DeploymentPackEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `directoryName` TEXT NOT NULL, `downloadedAt` TEXT NOT NULL, `activateAt` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `activated` INTEGER NOT NULL, `uuid` TEXT NOT NULL, `downloadSource` TEXT NOT NULL, `userPrompted` INTEGER NOT NULL, `portalId` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "directoryName",
+            "columnName": "directoryName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "downloadedAt",
+            "columnName": "downloadedAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activateAt",
+            "columnName": "activateAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activated",
+            "columnName": "activated",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uuid",
+            "columnName": "uuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "downloadSource",
+            "columnName": "downloadSource",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userPrompted",
+            "columnName": "userPrompted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "portalId",
+            "columnName": "portalId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DnopEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `senderUuid` TEXT NOT NULL, `callSign` TEXT NOT NULL, `receivedTimestamp` INTEGER NOT NULL, `batteryLevel` INTEGER NOT NULL, `batteryCharging` INTEGER NOT NULL, `rssi` TEXT NOT NULL, `active` INTEGER NOT NULL, `pliSent` INTEGER NOT NULL, `pliReceived` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "senderUuid",
+            "columnName": "senderUuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "callSign",
+            "columnName": "callSign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receivedTimestamp",
+            "columnName": "receivedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "batteryLevel",
+            "columnName": "batteryLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "batteryCharging",
+            "columnName": "batteryCharging",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rssi",
+            "columnName": "rssi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pliSent",
+            "columnName": "pliSent",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pliReceived",
+            "columnName": "pliReceived",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "EncryptionKeyEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `deploymentPackId` INTEGER NOT NULL, `name` TEXT NOT NULL, `uuid` TEXT NOT NULL, `publicKey` TEXT NOT NULL, `privateKey` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `defaultSelection` INTEGER NOT NULL, FOREIGN KEY(`deploymentPackId`) REFERENCES `DeploymentPackEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deploymentPackId",
+            "columnName": "deploymentPackId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uuid",
+            "columnName": "uuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publicKey",
+            "columnName": "publicKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "privateKey",
+            "columnName": "privateKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defaultSelection",
+            "columnName": "defaultSelection",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_EncryptionKeyEntity_deploymentPackId",
+            "unique": false,
+            "columnNames": [
+              "deploymentPackId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_EncryptionKeyEntity_deploymentPackId` ON `${TABLE_NAME}` (`deploymentPackId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DeploymentPackEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "deploymentPackId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FileTransferEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`senderGid` INTEGER NOT NULL, `gripMessageId` INTEGER NOT NULL, `fileName` TEXT NOT NULL, `fileData` BLOB NOT NULL, `senderCallsign` TEXT NOT NULL, `recipientUuid` TEXT NOT NULL, `recipientCallsign` TEXT NOT NULL, `transferDirection` TEXT NOT NULL, `transferStatus` TEXT NOT NULL, `messageUuid` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, PRIMARY KEY(`senderGid`, `gripMessageId`))",
+        "fields": [
+          {
+            "fieldPath": "senderGid",
+            "columnName": "senderGid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gripMessageId",
+            "columnName": "gripMessageId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileName",
+            "columnName": "fileName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileData",
+            "columnName": "fileData",
+            "affinity": "BLOB",
+            "notNull": true
+          },
+          {
+            "fieldPath": "senderCallsign",
+            "columnName": "senderCallsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recipientUuid",
+            "columnName": "recipientUuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recipientCallsign",
+            "columnName": "recipientCallsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transferDirection",
+            "columnName": "transferDirection",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transferStatus",
+            "columnName": "transferStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "messageUuid",
+            "columnName": "messageUuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "senderGid",
+            "gripMessageId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "FrequencySetEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `deploymentPackId` INTEGER NOT NULL, `name` TEXT NOT NULL, `power` REAL NOT NULL, `deviation` INTEGER NOT NULL, `callsign` TEXT NOT NULL, `isUseOnly` INTEGER NOT NULL, `defaultSelection` INTEGER NOT NULL, FOREIGN KEY(`deploymentPackId`) REFERENCES `DeploymentPackEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deploymentPackId",
+            "columnName": "deploymentPackId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "power",
+            "columnName": "power",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviation",
+            "columnName": "deviation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "callsign",
+            "columnName": "callsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isUseOnly",
+            "columnName": "isUseOnly",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defaultSelection",
+            "columnName": "defaultSelection",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_FrequencySetEntity_deploymentPackId",
+            "unique": false,
+            "columnNames": [
+              "deploymentPackId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_FrequencySetEntity_deploymentPackId` ON `${TABLE_NAME}` (`deploymentPackId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DeploymentPackEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "deploymentPackId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FrequencySetChannelEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `frequencySetId` INTEGER NOT NULL, `frequencyInHz` INTEGER NOT NULL, `isControl` INTEGER NOT NULL, FOREIGN KEY(`frequencySetId`) REFERENCES `FrequencySetEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frequencySetId",
+            "columnName": "frequencySetId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frequencyInHz",
+            "columnName": "frequencyInHz",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isControl",
+            "columnName": "isControl",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_FrequencySetChannelEntity_frequencySetId",
+            "unique": false,
+            "columnNames": [
+              "frequencySetId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_FrequencySetChannelEntity_frequencySetId` ON `${TABLE_NAME}` (`frequencySetId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "FrequencySetEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "frequencySetId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LocationSharingEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `deploymentPackId` INTEGER NOT NULL, `frequencyTime` INTEGER NOT NULL, `jitteringValue` INTEGER NOT NULL, `distanceFrequency` INTEGER NOT NULL, FOREIGN KEY(`deploymentPackId`) REFERENCES `DeploymentPackEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deploymentPackId",
+            "columnName": "deploymentPackId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frequencyTime",
+            "columnName": "frequencyTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jitteringValue",
+            "columnName": "jitteringValue",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distanceFrequency",
+            "columnName": "distanceFrequency",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_LocationSharingEntity_deploymentPackId",
+            "unique": false,
+            "columnNames": [
+              "deploymentPackId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LocationSharingEntity_deploymentPackId` ON `${TABLE_NAME}` (`deploymentPackId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DeploymentPackEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "deploymentPackId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LogEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` TEXT NOT NULL, `logType` TEXT NOT NULL, `applicationInfoLogJson` TEXT, `locationLogJson` TEXT, `radioStatusLogJson` TEXT, `transmittedMessageLogJson` TEXT, `userEventLogJson` TEXT, `radioStatus_serialNumber` TEXT, `transmittedMessage_timestamp` TEXT, `transmittedMessage_messageType` TEXT, `transmittedMessage_chatType` TEXT, `transmittedMessage_senderCallsign` TEXT, `transmittedMessage_senderUUID` TEXT, `transmittedMessage_originatorCallsign` TEXT, `transmittedMessage_originatorUUID` TEXT, `userEvent_serialNumber` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logType",
+            "columnName": "logType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applicationInfoLogJson",
+            "columnName": "applicationInfoLogJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationLogJson",
+            "columnName": "locationLogJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "radioStatusLogJson",
+            "columnName": "radioStatusLogJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessageLogJson",
+            "columnName": "transmittedMessageLogJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userEventLogJson",
+            "columnName": "userEventLogJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "radioStatus.serialNumber",
+            "columnName": "radioStatus_serialNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.timestamp",
+            "columnName": "transmittedMessage_timestamp",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.messageType",
+            "columnName": "transmittedMessage_messageType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.chatType",
+            "columnName": "transmittedMessage_chatType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.senderCallsign",
+            "columnName": "transmittedMessage_senderCallsign",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.senderUUID",
+            "columnName": "transmittedMessage_senderUUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.originatorCallsign",
+            "columnName": "transmittedMessage_originatorCallsign",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transmittedMessage.originatorUUID",
+            "columnName": "transmittedMessage_originatorUUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userEvent.serialNumber",
+            "columnName": "userEvent_serialNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "MapFileEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `deploymentPackId` INTEGER NOT NULL, `fileLocation` TEXT NOT NULL, `name` TEXT NOT NULL, `fileSize` INTEGER NOT NULL, FOREIGN KEY(`deploymentPackId`) REFERENCES `DeploymentPackEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deploymentPackId",
+            "columnName": "deploymentPackId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileLocation",
+            "columnName": "fileLocation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileSize",
+            "columnName": "fileSize",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_MapFileEntity_deploymentPackId",
+            "unique": false,
+            "columnNames": [
+              "deploymentPackId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_MapFileEntity_deploymentPackId` ON `${TABLE_NAME}` (`deploymentPackId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DeploymentPackEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "deploymentPackId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "MissionModePresetEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `isSelected` INTEGER NOT NULL, `name` TEXT NOT NULL, `doLocationUpdate` INTEGER NOT NULL, `pli` INTEGER NOT NULL, `jittering` TEXT NOT NULL, `useDistance` INTEGER NOT NULL, `distance` INTEGER NOT NULL, `power` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSelected",
+            "columnName": "isSelected",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "doLocationUpdate",
+            "columnName": "doLocationUpdate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pli",
+            "columnName": "pli",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jittering",
+            "columnName": "jittering",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "useDistance",
+            "columnName": "useDistance",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distance",
+            "columnName": "distance",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "power",
+            "columnName": "power",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "PangiamConfigEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `receiverUuid` TEXT NOT NULL, `receiverCallsign` TEXT NOT NULL, `isEnabled` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receiverUuid",
+            "columnName": "receiverUuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receiverCallsign",
+            "columnName": "receiverCallsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isEnabled",
+            "columnName": "isEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "pangiam_request_entity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`request_uuid` TEXT NOT NULL, `sender_gid` INTEGER NOT NULL, PRIMARY KEY(`request_uuid`))",
+        "fields": [
+          {
+            "fieldPath": "requestUuid",
+            "columnName": "request_uuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "senderGid",
+            "columnName": "sender_gid",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "request_uuid"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "primary_config_entity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `dnop_id` INTEGER, `dnop_display_enabled` INTEGER, `dnop_send_enabled` INTEGER, `dnop_uuid` TEXT, `dnop_broadcast` INTEGER, `dnop_network_size` INTEGER, `atos_id` INTEGER, `atos_enabled` INTEGER, `atos_radius_enabled` INTEGER, `atos_radius` REAL, `atos_rate` INTEGER, `device_config_id` INTEGER, `device_config_mission_enabled` INTEGER, `device_config_mission_widget_enabled` INTEGER, `device_config_power_level` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dnopConfig.dnopId",
+            "columnName": "dnop_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dnopConfig.displayEnabled",
+            "columnName": "dnop_display_enabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dnopConfig.sendEnabled",
+            "columnName": "dnop_send_enabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dnopConfig.dnopReceiverUuid",
+            "columnName": "dnop_uuid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dnopConfig.dnopBroadcastEnabled",
+            "columnName": "dnop_broadcast",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dnopConfig.dnopNetworkSize",
+            "columnName": "dnop_network_size",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "atosConfig.atosId",
+            "columnName": "atos_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "atosConfig.atosEnabled",
+            "columnName": "atos_enabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "atosConfig.atosRadiusEnabled",
+            "columnName": "atos_radius_enabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "atosConfig.atosRadius",
+            "columnName": "atos_radius",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "atosConfig.atosRate",
+            "columnName": "atos_rate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceConfig.id",
+            "columnName": "device_config_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceConfig.isMissionModeEnabled",
+            "columnName": "device_config_mission_enabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceConfig.isMissionWidgetEnabled",
+            "columnName": "device_config_mission_widget_enabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceConfig.powerLevel",
+            "columnName": "device_config_power_level",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_primary_config_entity_id",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_primary_config_entity_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "radio_entity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`serialNumber` TEXT NOT NULL, `address` TEXT NOT NULL, `active` INTEGER NOT NULL, `lastConnected` INTEGER NOT NULL, `connectionType` TEXT NOT NULL, PRIMARY KEY(`serialNumber`))",
+        "fields": [
+          {
+            "fieldPath": "serialNumber",
+            "columnName": "serialNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastConnected",
+            "columnName": "lastConnected",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "connectionType",
+            "columnName": "connectionType",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "serialNumber"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RemoteCommandHistoryEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `typeId` INTEGER NOT NULL, `setId` INTEGER NOT NULL, `timestamp` TEXT NOT NULL, `callsign` TEXT NOT NULL, `unread` INTEGER NOT NULL, FOREIGN KEY(`typeId`) REFERENCES `RemoteCommandHistoryTypeEntity`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`setId`) REFERENCES `RemoteCommandSetEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "typeId",
+            "columnName": "typeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "setId",
+            "columnName": "setId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "callsign",
+            "columnName": "callsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unread",
+            "columnName": "unread",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "RemoteCommandHistoryTypeEntity",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "typeId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "RemoteCommandSetEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "setId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "RemoteCommandHistoryTypeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RemoteCommandNodeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contactUuid` TEXT NOT NULL, `callsign` TEXT NOT NULL, `modifiable` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contactUuid",
+            "columnName": "contactUuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "callsign",
+            "columnName": "callsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modifiable",
+            "columnName": "modifiable",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RemoteCommandNodePrivilegeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`nodeId` INTEGER NOT NULL, `settingTypeId` INTEGER NOT NULL, PRIMARY KEY(`nodeId`, `settingTypeId`), FOREIGN KEY(`nodeId`) REFERENCES `RemoteCommandNodeEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`settingTypeId`) REFERENCES `RemoteCommandSettingTypeEntity`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "nodeId",
+            "columnName": "nodeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "settingTypeId",
+            "columnName": "settingTypeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "nodeId",
+            "settingTypeId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "RemoteCommandNodeEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "nodeId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "RemoteCommandSettingTypeEntity",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "settingTypeId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "RemoteCommandSetEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "RemoteCommandSetDataEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`setId` INTEGER NOT NULL, `settingTypeId` INTEGER NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`setId`, `settingTypeId`), FOREIGN KEY(`setId`) REFERENCES `RemoteCommandSetEntity`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`settingTypeId`) REFERENCES `RemoteCommandSettingTypeEntity`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "setId",
+            "columnName": "setId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "settingTypeId",
+            "columnName": "settingTypeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "setId",
+            "settingTypeId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "RemoteCommandSetEntity",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "setId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "RemoteCommandSettingTypeEntity",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "settingTypeId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "RemoteCommandSettingTypeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ssr_nerf_entity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `desired_effect` TEXT NOT NULL, `effective_datetime` TEXT NOT NULL, `creation_timestamp` INTEGER NOT NULL, `creator_callsign` TEXT NOT NULL, `recipient_callsign` TEXT NOT NULL, `form_type` TEXT NOT NULL, `form_data` BLOB NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desiredEffect",
+            "columnName": "desired_effect",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "effectiveDateTime",
+            "columnName": "effective_datetime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "creationTimestamp",
+            "columnName": "creation_timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "creatorCallsign",
+            "columnName": "creator_callsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recipientCallsign",
+            "columnName": "recipient_callsign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "formType",
+            "columnName": "form_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "formData",
+            "columnName": "form_data",
+            "affinity": "BLOB",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "user_entity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`radioGid` INTEGER NOT NULL, `callSign` TEXT NOT NULL, `name` TEXT NOT NULL, `organization` TEXT, `lastConnectedTime` TEXT NOT NULL, `userType` INTEGER NOT NULL, `backhaulNode` INTEGER NOT NULL, `selectedFronthaulNode` TEXT NOT NULL, `allowAllFronthaulUsers` INTEGER NOT NULL, `accessToken` TEXT NOT NULL, `completedOnboarding` INTEGER NOT NULL, `acceptedLegalTerms` INTEGER NOT NULL, `onboardingMode` TEXT NOT NULL, `emergencyMessage` TEXT, `uuid` TEXT NOT NULL, `lat` REAL, `altitude` REAL, `horizontalAccuracy` REAL, `timeStamp` TEXT, `locationId` INTEGER, PRIMARY KEY(`uuid`))",
+        "fields": [
+          {
+            "fieldPath": "radioGid",
+            "columnName": "radioGid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "callSign",
+            "columnName": "callSign",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "organization",
+            "columnName": "organization",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastConnectedTime",
+            "columnName": "lastConnectedTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userType",
+            "columnName": "userType",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "backhaulNode",
+            "columnName": "backhaulNode",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "selectedFronthaulNode",
+            "columnName": "selectedFronthaulNode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "allowAllFronthaulUsers",
+            "columnName": "allowAllFronthaulUsers",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accessToken",
+            "columnName": "accessToken",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedOnboarding",
+            "columnName": "completedOnboarding",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "acceptedLegalTerms",
+            "columnName": "acceptedLegalTerms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onboardingMode",
+            "columnName": "onboardingMode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emergencyMessage",
+            "columnName": "emergencyMessage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "uuid",
+            "columnName": "uuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentLocation.lat",
+            "columnName": "lat",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentLocation.altitude",
+            "columnName": "altitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentLocation.horizontalAccuracy",
+            "columnName": "horizontalAccuracy",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentLocation.timeStamp",
+            "columnName": "timeStamp",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentLocation.locationId",
+            "columnName": "locationId",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "uuid"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_user_entity_uuid",
+            "unique": false,
+            "columnNames": [
+              "uuid"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_user_entity_uuid` ON `${TABLE_NAME}` (`uuid`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "UserLocationEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`lat` REAL NOT NULL, `altitude` REAL NOT NULL, `horizontalAccuracy` REAL NOT NULL, `timeStamp` TEXT NOT NULL, `locationId` INTEGER NOT NULL, PRIMARY KEY(`locationId`))",
+        "fields": [
+          {
+            "fieldPath": "lat",
+            "columnName": "lat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "altitude",
+            "columnName": "altitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "horizontalAccuracy",
+            "columnName": "horizontalAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeStamp",
+            "columnName": "timeStamp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locationId",
+            "columnName": "locationId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "locationId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '27b4cd9ae5927176e0999e93f330901b')"
+    ]
+  }
+}

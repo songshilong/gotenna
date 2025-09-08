@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/frequency" android:title="@string/frequency_tab_label" />
+    <item android:id="@id/jittering" android:title="@string/jittering_tab_label" />
+    <item android:id="@id/distance" android:title="@string/Distance_tab_label" />
+</menu>

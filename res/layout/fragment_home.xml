@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ScrollView android:id="@id/homeScrollView" android:background="@color/settings_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/settingsParentView" android:paddingBottom="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/titleTextView" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/settings_title_pro" android:lineSpacingExtra="8.0sp" android:fontFamily="sans-serif-medium" />
+                <RelativeLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/deviceBackgroundImageView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@null" android:scaleType="fitXY" android:layout_alignTop="@id/deviceStatusView" android:layout_alignBottom="@id/deviceStatusView" />
+                    <com.gotenna.atak.views.GTDeviceStatusView android:id="@id/deviceStatusView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/versionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:layout_alignBottom="@id/deviceStatusView" android:layout_marginEnd="4.0dip" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <com.gotenna.atak.helper.NonScrollListView android:id="@id/listView" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/item" android:id="@id/accountInfoTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" />
+                <FrameLayout android:layout_gravity="center" android:id="@id/logoutButtonLayout" android:background="@drawable/bg_green_pill" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="16.0dip" android:foreground="@drawable/ripple_background" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:elevation="2.0dip">
+                    <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/logoutButtonTextView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAllCaps="true" android:fontFamily="sans-serif-medium" />
+                    <com.google.android.material.progressindicator.CircularProgressIndicator android:theme="@style/Theme.AppCompat" android:layout_gravity="center_horizontal" android:id="@id/loggingOutIndicator" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:indeterminate="true" app:indicatorColor="@color/black" app:indicatorInset="4.0dip" app:indicatorSize="28.0dip" app:trackColor="@color/light_green" app:trackThickness="3.0dip" />
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+        <View android:id="@id/transparentView" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="0.0dip" android:elevation="3.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

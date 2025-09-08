@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/vwActionBar" layout="@layout/view_action_bar_with_primary_button" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/page_margin" android:paddingEnd="@dimen/page_margin">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" android:text="@string/ssr_send_subtitle" style="@style/GtTypography.HeaderTitle" />
+            <EditText android:id="@id/etRequestingUnit" android:layout_marginTop="0.0dip" android:hint="@string/ssr_send_hint_requesting_unit" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etRequestor" android:hint="@string/ssr_send_hint_requestor" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etContactInfo" android:hint="@string/ssr_send_hint_contact_info" android:maxLength="25" style="@style/SsrEditText" />
+            <EditText android:id="@id/etNumber" android:hint="@string/ssr_send_hint_number" android:maxLength="14" android:digits="@string/edittext_pattern_alphanumeric" style="@style/SsrEditText" />
+            <EditText android:id="@id/etWho" android:hint="@string/ssr_send_hint_who" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etWhere" android:hint="@string/ssr_send_hint_where" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etDtgWhen" android:focusable="false" android:clickable="true" android:hint="@string/ssr_send_hint_when" android:inputType="none" style="@style/SsrEditText" />
+            <EditText android:id="@id/etWhy" android:hint="@string/ssr_send_hint_why" android:maxLength="15" android:imeOptions="actionDone" style="@style/SsrEditText" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_vertical_margin">
+                <com.atakmap.android.gui.PluginSpinner android:id="@id/spinDesiredEffect" android:background="@color/item" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" android:layout_marginTop="@dimen/form_field_vertical_margin" style="@style/ATAKSpinner" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_spinner_caret" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText android:id="@id/etOther" android:hint="@string/ssr_send_hint_other" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etAuthorityControl" android:hint="@string/ssr_send_hint_jca" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etAuthorityInitiate" android:hint="@string/ssr_send_hint_jia" android:maxLength="15" style="@style/SsrEditText" />
+            <EditText android:id="@id/etTarget" android:hint="@string/ssr_send_hint_target" android:maxLength="15" android:imeOptions="actionDone" style="@style/SsrEditText" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_vertical_margin">
+                <com.atakmap.android.gui.PluginSpinner android:id="@id/frequencyBandSpinner" android:background="@color/item" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" android:layout_marginTop="@dimen/form_field_vertical_margin" style="@style/ATAKSpinner" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_spinner_caret" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText android:id="@id/etCeaseOne" android:hint="@string/ssr_send_hint_cease_one" android:maxLength="10" style="@style/SsrEditText" />
+            <EditText android:id="@id/etCeaseTwo" android:hint="@string/ssr_send_hint_cease_two" android:maxLength="10" style="@style/SsrEditText" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" android:text="@string/ssr_send_category_location" style="@style/GtTypography.HeaderTitle" />
+            <EditText android:id="@id/etLocationStart" android:layout_marginTop="0.0dip" android:hint="@string/ssr_send_hint_location" style="@style/SsrLocationEditText" />
+            <EditText android:id="@id/etLocationOne" android:visibility="gone" style="@style/SsrLocationEditText" />
+            <EditText android:id="@id/etLocationTwo" android:visibility="gone" style="@style/SsrLocationEditText" />
+            <EditText android:id="@id/etLocationThree" android:visibility="gone" style="@style/SsrLocationEditText" />
+            <EditText android:id="@id/etLocationFour" android:visibility="gone" style="@style/SsrLocationEditText" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/green" android:id="@id/tvClearLocation" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/ssr_send_label_clear_location" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" android:text="@string/ssr_send_category_dtg" style="@style/GtTypography.HeaderTitle" />
+            <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/etDtgStart" android:focusable="false" android:clickable="true" android:layout_width="0.0dip" android:hint="@string/ssr_send_hint_dtg_start" android:layout_weight="1.0" android:inputType="none" style="@style/FormEditText" />
+                <View android:layout_width="12.0dip" android:layout_height="wrap_content" />
+                <EditText android:id="@id/etDtgEnd" android:focusable="false" android:clickable="true" android:layout_width="0.0dip" android:hint="@string/ssr_send_hint_dtg_end" android:layout_weight="1.0" android:inputType="none" style="@style/FormEditText" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" android:text="@string/ssr_send_category_type_requested" style="@style/GtTypography.HeaderTitle" />
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvTypeRequested" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:layout_width="wrap_content" android:layout_height="8.0dip" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,29 @@
+version: 2.11.1
+apkFileName: 1.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 34
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 1741391919
+  versionName: 2.2.61 (f2e7b2c8) - [5.3.0]
+sharedLibrary: false
+sparseResources: false
+compactEntries: false
+doNotCompress:
+- arsc
+- gif
+- png
+- META-INF/services/atakplugin.gotennaproag.Yv
+- META-INF/services/atakplugin.gotennaproag.v02
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- okhttp3/internal/publicsuffix/publicsuffixes.gz
+- org/fusesource/jansi/jansi.properties

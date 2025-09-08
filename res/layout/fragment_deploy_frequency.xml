@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ListView android:id="@id/frequencyListView" android:background="@color/background" android:paddingBottom="@dimen/button_height" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/gtActionBar" />
+    <FrameLayout android:id="@id/frequencyNextButtonLayout" android:background="@color/onboarding_button_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/button_height" android:foreground="@drawable/ripple_background" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/generate_deploy_qr_code" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:letterSpacing="0.04" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tosHeaderTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="start" android:id="@id/tosDetailTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:lineSpacingExtra="6.0sp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

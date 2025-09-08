@@ -1,0 +1,71 @@
+.class Latakplugin/gotennaproag/Mx0$a$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Latakplugin/gotennaproag/lN;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Latakplugin/gotennaproag/Mx0$a;->a(Latakplugin/gotennaproag/l5;)Latakplugin/gotennaproag/lN;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Latakplugin/gotennaproag/l5;
+
+.field final synthetic b:Latakplugin/gotennaproag/Mx0$b;
+
+.field final synthetic c:Latakplugin/gotennaproag/Mx0$a;
+
+
+# direct methods
+.method constructor <init>(Latakplugin/gotennaproag/Mx0$a;Latakplugin/gotennaproag/l5;Latakplugin/gotennaproag/Mx0$b;)V
+    .locals 0
+
+    iput-object p1, p0, Latakplugin/gotennaproag/Mx0$a$a;->c:Latakplugin/gotennaproag/Mx0$a;
+
+    iput-object p2, p0, Latakplugin/gotennaproag/Mx0$a$a;->a:Latakplugin/gotennaproag/l5;
+
+    iput-object p3, p0, Latakplugin/gotennaproag/Mx0$a$a;->b:Latakplugin/gotennaproag/Mx0$b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Latakplugin/gotennaproag/l5;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/Mx0$a$a;->a:Latakplugin/gotennaproag/l5;
+
+    return-object v0
+.end method
+
+.method public b()Ljava/io/OutputStream;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/Mx0$a$a;->b:Latakplugin/gotennaproag/Mx0$b;
+
+    return-object v0
+.end method
+
+.method public c()[B
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/Mx0$a$a;->b:Latakplugin/gotennaproag/Mx0$b;
+
+    invoke-virtual {v0}, Latakplugin/gotennaproag/Mx0$b;->a()[B
+
+    move-result-object v0
+
+    return-object v0
+.end method

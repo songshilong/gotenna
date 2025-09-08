@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ListView android:id="@id/frequencyListView" android:paddingTop="8.0dip" android:paddingBottom="32.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/gtActionBar" />
+    <TextView android:id="@id/warningMessageTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:layout_centerInParent="true" />
+</RelativeLayout>

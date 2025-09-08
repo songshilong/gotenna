@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:orientation="vertical" android:id="@id/logDateTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:orientation="vertical" android:id="@id/logTypeTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:orientation="vertical" android:id="@id/logContentTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

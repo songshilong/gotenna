@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_device_config_mission_preset_0" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/lytMissionPresetEnable" layout="@layout/layout_setting_toggle" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvMissionPreset" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_interval_selector_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:background="@color/background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/headerTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/fronthaul_atos_update_rate_title" android:layout_marginStart="16.0dip" android:layout_marginEnd="31.0dip" style="@style/GtTypography.HeaderTitle" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/contactSearchView" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

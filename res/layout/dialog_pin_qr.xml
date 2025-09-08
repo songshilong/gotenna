@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/optionsView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="16.0sp" android:textColor="@color/onboarding_button_background" android:gravity="center" android:id="@id/showQrButton" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/qr_code_text" />
+            <View android:id="@id/selectedQRView" android:background="@drawable/bg_blue_rounded" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/showPinQrButton" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/passphrase" />
+            <View android:id="@id/selectedPinView" android:background="@drawable/bg_blue_rounded" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dotsLayout" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="256.0dip" android:layout_below="@id/optionsView">
+        <ImageView android:layout_gravity="center" android:id="@id/pinQrView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxWidth="@dimen/qr_code_image_size" android:maxHeight="@dimen/qr_code_image_size" android:contentDescription="@string/qr_code_text" />
+        <com.gotenna.atak.settings.encryption.PassphraseView android:id="@id/passphraseView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

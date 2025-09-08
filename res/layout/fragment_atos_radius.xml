@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_atos_radius_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_alignParentEnd="true">
+            <Button android:enabled="false" android:textColor="@color/divider_gray" android:id="@id/sumbitButton" android:background="@color/item" android:layout_width="148.0dip" android:layout_height="wrap_content" android:text="@string/fronthaul_atos_submit" android:textAllCaps="false" />
+        </LinearLayout>
+    </com.gotenna.atak.views.GTActionBar>
+    <ScrollView android:background="@color/background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/fronthaul_atos_radius_update_title" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/GtTypography.HeaderTitle" />
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clAtosToggle" android:background="@color/item" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:paddingStart="16.0dip" android:paddingEnd="14.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/tvAtosRadiusTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fronthaul_atos_radius_title" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/spaceBtnAtosRadiusEnable" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <Space android:id="@id/spaceBtnAtosRadiusEnable" android:layout_width="16.0dip" android:layout_height="0.0dip" app:layout_constraintEnd_toStartOf="@id/btnAtosRadiusEnable" app:layout_constraintTop_toTopOf="@id/btnAtosRadiusEnable" />
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/btnAtosRadiusEnable" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/GtSwitch" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clAtosRadius" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:paddingStart="16.0dip" android:paddingEnd="14.0dip">
+                <EditText android:textColor="@color/white" android:gravity="center" android:id="@id/etRadius" android:background="@drawable/edittext_green_bottom_line" android:layout_width="wrap_content" android:layout_height="44.0dip" android:minWidth="64.0dip" android:inputType="numberDecimal" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/tvRadiusUnits" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fronthaul_atos_radius_units" android:paddingStart="15.0dip" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/etRadius" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="48.0dip" android:foreground="@drawable/ripple_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="start" android:layout_gravity="center" android:id="@id/tosItemHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" />
+</FrameLayout>

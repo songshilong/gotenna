@@ -1,0 +1,128 @@
+.class public final Latakplugin/gotennaproag/ax;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0018\u00002\u00020\u0001B\u001f\u0012\u0006\u0010\u0007\u001a\u00020\u0002\u0012\u0006\u0010\u000c\u001a\u00020\u0008\u0012\u0006\u0010\u0010\u001a\u00020\r\u00a2\u0006\u0004\u0008\u0011\u0010\u0012R\u0017\u0010\u0007\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006R\u0017\u0010\u000c\u001a\u00020\u00088\u0006\u00a2\u0006\u000c\n\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u0003\u0010\u000bR\u0017\u0010\u0010\u001a\u00020\r8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010\u000e\u001a\u0004\u0008\t\u0010\u000f\u00a8\u0006\u0013"
+    }
+    d2 = {
+        "Latakplugin/gotennaproag/ax;",
+        "",
+        "Latakplugin/gotennaproag/wy1;",
+        "a",
+        "Latakplugin/gotennaproag/wy1;",
+        "c",
+        "()Latakplugin/gotennaproag/wy1;",
+        "socket",
+        "Latakplugin/gotennaproag/hj;",
+        "b",
+        "Latakplugin/gotennaproag/hj;",
+        "()Latakplugin/gotennaproag/hj;",
+        "input",
+        "Latakplugin/gotennaproag/vj;",
+        "Latakplugin/gotennaproag/vj;",
+        "()Latakplugin/gotennaproag/vj;",
+        "output",
+        "<init>",
+        "(Latakplugin/gotennaproag/wy1;Latakplugin/gotennaproag/hj;Latakplugin/gotennaproag/vj;)V",
+        "ktor-network"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field private final a:Latakplugin/gotennaproag/wy1;
+    .annotation build Latak/core/aqp;
+    .end annotation
+.end field
+
+.field private final b:Latakplugin/gotennaproag/hj;
+    .annotation build Latak/core/aqp;
+    .end annotation
+.end field
+
+.field private final c:Latakplugin/gotennaproag/vj;
+    .annotation build Latak/core/aqp;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Latakplugin/gotennaproag/wy1;Latakplugin/gotennaproag/hj;Latakplugin/gotennaproag/vj;)V
+    .locals 1
+    .param p1    # Latakplugin/gotennaproag/wy1;
+        .annotation build Latak/core/aqp;
+        .end annotation
+    .end param
+    .param p2    # Latakplugin/gotennaproag/hj;
+        .annotation build Latak/core/aqp;
+        .end annotation
+    .end param
+    .param p3    # Latakplugin/gotennaproag/vj;
+        .annotation build Latak/core/aqp;
+        .end annotation
+    .end param
+
+    const-string v0, "socket"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "input"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "output"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Latakplugin/gotennaproag/ax;->a:Latakplugin/gotennaproag/wy1;
+
+    iput-object p2, p0, Latakplugin/gotennaproag/ax;->b:Latakplugin/gotennaproag/hj;
+
+    iput-object p3, p0, Latakplugin/gotennaproag/ax;->c:Latakplugin/gotennaproag/vj;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Latakplugin/gotennaproag/hj;
+    .locals 1
+    .annotation build Latak/core/aqp;
+    .end annotation
+
+    iget-object v0, p0, Latakplugin/gotennaproag/ax;->b:Latakplugin/gotennaproag/hj;
+
+    return-object v0
+.end method
+
+.method public final b()Latakplugin/gotennaproag/vj;
+    .locals 1
+    .annotation build Latak/core/aqp;
+    .end annotation
+
+    iget-object v0, p0, Latakplugin/gotennaproag/ax;->c:Latakplugin/gotennaproag/vj;
+
+    return-object v0
+.end method
+
+.method public final c()Latakplugin/gotennaproag/wy1;
+    .locals 1
+    .annotation build Latak/core/aqp;
+    .end annotation
+
+    iget-object v0, p0, Latakplugin/gotennaproag/ax;->a:Latakplugin/gotennaproag/wy1;
+
+    return-object v0
+.end method

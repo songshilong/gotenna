@@ -1,0 +1,192 @@
+.class public Latakplugin/gotennaproag/N01;
+.super Latakplugin/gotennaproag/s0;
+.source "SourceFile"
+
+
+# instance fields
+.field private a:Latakplugin/gotennaproag/IG1;
+
+.field private c:Latakplugin/gotennaproag/IG1;
+
+
+# direct methods
+.method public constructor <init>(Latakplugin/gotennaproag/IG1;Latakplugin/gotennaproag/IG1;)V
+    .locals 0
+
+    .line 8
+    invoke-direct {p0}, Latakplugin/gotennaproag/s0;-><init>()V
+
+    if-nez p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    .line 9
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "at least one of notBefore/notAfter must not be null."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    iput-object p1, p0, Latakplugin/gotennaproag/N01;->a:Latakplugin/gotennaproag/IG1;
+
+    iput-object p2, p0, Latakplugin/gotennaproag/N01;->c:Latakplugin/gotennaproag/IG1;
+
+    return-void
+.end method
+
+.method private constructor <init>(Latakplugin/gotennaproag/z0;)V
+    .locals 3
+
+    .line 1
+    invoke-direct {p0}, Latakplugin/gotennaproag/s0;-><init>()V
+
+    .line 2
+    invoke-virtual {p1}, Latakplugin/gotennaproag/z0;->N()Ljava/util/Enumeration;
+
+    move-result-object p1
+
+    .line 3
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Latakplugin/gotennaproag/F0;
+
+    .line 5
+    invoke-virtual {v0}, Latakplugin/gotennaproag/F0;->g()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_0
+
+    .line 6
+    invoke-static {v0, v2}, Latakplugin/gotennaproag/IG1;->D(Latakplugin/gotennaproag/F0;Z)Latakplugin/gotennaproag/IG1;
+
+    move-result-object v0
+
+    iput-object v0, p0, Latakplugin/gotennaproag/N01;->a:Latakplugin/gotennaproag/IG1;
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    invoke-static {v0, v2}, Latakplugin/gotennaproag/IG1;->D(Latakplugin/gotennaproag/F0;Z)Latakplugin/gotennaproag/IG1;
+
+    move-result-object v0
+
+    iput-object v0, p0, Latakplugin/gotennaproag/N01;->c:Latakplugin/gotennaproag/IG1;
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public static C(Ljava/lang/Object;)Latakplugin/gotennaproag/N01;
+    .locals 1
+
+    instance-of v0, p0, Latakplugin/gotennaproag/N01;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Latakplugin/gotennaproag/N01;
+
+    return-object p0
+
+    :cond_0
+    if-eqz p0, :cond_1
+
+    new-instance v0, Latakplugin/gotennaproag/N01;
+
+    invoke-static {p0}, Latakplugin/gotennaproag/z0;->K(Ljava/lang/Object;)Latakplugin/gotennaproag/z0;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Latakplugin/gotennaproag/N01;-><init>(Latakplugin/gotennaproag/z0;)V
+
+    return-object v0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public D()Latakplugin/gotennaproag/IG1;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/N01;->c:Latakplugin/gotennaproag/IG1;
+
+    return-object v0
+.end method
+
+.method public E()Latakplugin/gotennaproag/IG1;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/N01;->a:Latakplugin/gotennaproag/IG1;
+
+    return-object v0
+.end method
+
+.method public h()Latakplugin/gotennaproag/y0;
+    .locals 5
+
+    new-instance v0, Latakplugin/gotennaproag/j0;
+
+    invoke-direct {v0}, Latakplugin/gotennaproag/j0;-><init>()V
+
+    iget-object v1, p0, Latakplugin/gotennaproag/N01;->a:Latakplugin/gotennaproag/IG1;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Latakplugin/gotennaproag/UC;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Latakplugin/gotennaproag/N01;->a:Latakplugin/gotennaproag/IG1;
+
+    invoke-direct {v1, v2, v3, v4}, Latakplugin/gotennaproag/UC;-><init>(ZILatakplugin/gotennaproag/i0;)V
+
+    invoke-virtual {v0, v1}, Latakplugin/gotennaproag/j0;->a(Latakplugin/gotennaproag/i0;)V
+
+    :cond_0
+    iget-object v1, p0, Latakplugin/gotennaproag/N01;->c:Latakplugin/gotennaproag/IG1;
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Latakplugin/gotennaproag/UC;
+
+    iget-object v3, p0, Latakplugin/gotennaproag/N01;->c:Latakplugin/gotennaproag/IG1;
+
+    invoke-direct {v1, v2, v2, v3}, Latakplugin/gotennaproag/UC;-><init>(ZILatakplugin/gotennaproag/i0;)V
+
+    invoke-virtual {v0, v1}, Latakplugin/gotennaproag/j0;->a(Latakplugin/gotennaproag/i0;)V
+
+    :cond_1
+    new-instance v1, Latakplugin/gotennaproag/NC;
+
+    invoke-direct {v1, v0}, Latakplugin/gotennaproag/NC;-><init>(Latakplugin/gotennaproag/j0;)V
+
+    return-object v1
+.end method

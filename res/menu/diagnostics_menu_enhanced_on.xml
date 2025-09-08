@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_clear_logs" android:title="@string/clear_logs" />
+    <item android:id="@id/action_save_logs" android:title="@string/save_logs" />
+    <item android:id="@id/action_toggle_enhanced_logging" android:title="@string/enhanced_log_on" />
+</menu>

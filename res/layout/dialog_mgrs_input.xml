@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="48.0dip" android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/etGridZoneDesignator" android:layout_width="wrap_content" android:maxLength="3" android:digits="@string/edittext_pattern_alphanumeric" android:layout_weight="1.0" android:inputType="textCapCharacters" style="@style/FormEditText" />
+    <EditText android:id="@id/etGridSquareId" android:layout_width="wrap_content" android:maxLength="2" android:digits="@string/edittext_pattern_letters" android:layout_weight="1.0" android:inputType="textCapCharacters" android:layout_marginStart="8.0dip" style="@style/FormEditText" />
+    <EditText android:id="@id/etEasting" android:layout_width="wrap_content" android:maxLength="5" android:digits="@string/edittext_pattern_numbers" android:layout_weight="2.0" android:inputType="number" android:layout_marginStart="8.0dip" style="@style/FormEditText" />
+    <EditText android:id="@id/etNorthing" android:layout_width="wrap_content" android:maxLength="5" android:digits="@string/edittext_pattern_numbers" android:layout_weight="2.0" android:inputType="number" android:layout_marginStart="8.0dip" style="@style/FormEditText" />
+</androidx.appcompat.widget.LinearLayoutCompat>

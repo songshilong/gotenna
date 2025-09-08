@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ListView android:id="@id/faqListView" android:paddingTop="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/line" android:dividerHeight="@dimen/divider_height" android:layout_below="@id/gtActionBar" />
+</RelativeLayout>

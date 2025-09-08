@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tvNetworkPdr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/dnop_user_list_pdr" android:layout_marginStart="16.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/ivVitals" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/ic_vital_signs" app:layout_constraintStart_toStartOf="@id/tvNetworkPdr" app:layout_constraintTop_toBottomOf="@id/tvNetworkPdr" />
+    <TextView android:textColor="@color/header_title" android:id="@id/tvPdrValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="9.0dip" app:layout_constraintStart_toEndOf="@id/ivVitals" app:layout_constraintTop_toTopOf="@id/ivVitals" />
+    <View android:background="@color/divider_gray" android:layout_width="0.0dip" android:layout_height="0.20000005dip" android:layout_marginTop="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ivVitals" />
+</androidx.constraintlayout.widget.ConstraintLayout>

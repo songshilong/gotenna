@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_device_config_encryption_0" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/lytMessageKey" layout="@layout/layout_setting_text" />
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <include android:id="@id/lytPliKey" layout="@layout/layout_setting_text" />
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <include android:id="@id/lytIgnoreUnencrypted" layout="@layout/layout_setting_toggle" />
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:text="@string/device_config_encryption_title_key_list" android:layout_marginStart="12.0dip" style="@style/GtTypography.HeaderTitle" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvKeys" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

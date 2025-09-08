@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_device_config_automatic_position_update_0" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/lytPliEnable" layout="@layout/layout_setting_toggle" />
+    <include android:id="@id/lytInterval" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" layout="@layout/layout_spinner_setting_with_radio_button" />
+    <include android:id="@id/lytJittering" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" layout="@layout/layout_spinner_setting" />
+    <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+    <include android:id="@id/lytDistance" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" layout="@layout/layout_spinner_setting_with_radio_button" />
+    <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+</LinearLayout>

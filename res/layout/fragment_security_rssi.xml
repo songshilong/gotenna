@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/tabChannelLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tab_security_tables" />
+    <View android:background="@color/divider_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <com.evrencoskun.tableview.TableView android:id="@id/tableviewRssi" android:layout_width="fill_parent" android:layout_height="fill_parent" app:allow_click_inside_cell="false" app:allow_click_inside_column_header="false" app:allow_click_inside_row_header="false" app:column_header_height="@dimen/rssi_cell_height" app:corner_view_location="top_left" app:row_header_width="@dimen/rssi_cell_row_header_width" app:separator_color="@color/selected_gray" app:unselected_color="@color/black" />
+</LinearLayout>

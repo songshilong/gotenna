@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:textColor="@color/white" android:id="@id/dialog_message_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/prox_charging_warning" android:layout_marginHorizontal="15.0dip" />
+    <CheckBox android:textColor="@color/white" android:id="@id/dialog_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/do_not_show_again" android:layout_marginHorizontal="8.0dip" />
+</LinearLayout>

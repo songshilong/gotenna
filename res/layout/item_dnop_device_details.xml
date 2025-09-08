@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_dnop_device_details_0" android:background="@color/item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/detailIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginStart="16.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/tvDetails" />
+    <TextView android:textSize="@dimen/text_size_small" android:textColor="@color/header_title" android:id="@id/tvDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" android:layout_marginVertical="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/detailIcon" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_ssr_nerf_detail_0" android:background="@color/black_33" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/titleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textColor="@color/header_title" android:id="@id/subtitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginStart="24.0dip" app:layout_constraintBottom_toTopOf="@id/scrollView" app:layout_constraintStart_toStartOf="@id/titleTextView" app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/formContentRecyclerView" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+</LinearLayout>

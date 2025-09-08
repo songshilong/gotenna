@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.tabs.TabLayout android:theme="@style/Theme.AppCompat" android:id="@id/lytTabs" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" app:tabGravity="fill" app:tabIndicatorColor="@color/green" app:tabMaxWidth="0.0dip" app:tabMode="fixed" app:tabSelectedTextColor="@color/green" app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/pagerHistory" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/lytTabs" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

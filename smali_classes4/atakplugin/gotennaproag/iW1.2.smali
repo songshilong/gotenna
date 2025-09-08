@@ -1,0 +1,139 @@
+.class public abstract Latakplugin/gotennaproag/iW1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a(Ljava/lang/String;)Z
+    .locals 0
+
+    invoke-static {p1}, Latakplugin/gotennaproag/MC;->M(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method protected b(Ljava/lang/String;I)Latakplugin/gotennaproag/y0;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-static {p1}, Latakplugin/gotennaproag/iC1;->j(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    sub-int/2addr v0, p2
+
+    div-int/lit8 v0, v0, 0x2
+
+    new-array v1, v0, [B
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-eq v2, v0, :cond_2
+
+    mul-int/lit8 v3, v2, 0x2
+
+    add-int/2addr v3, p2
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v5, 0x61
+
+    if-ge v4, v5, :cond_0
+
+    add-int/lit8 v4, v4, -0x30
+
+    shl-int/lit8 v4, v4, 0x4
+
+    int-to-byte v4, v4
+
+    aput-byte v4, v1, v2
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v4, v4, -0x57
+
+    shl-int/lit8 v4, v4, 0x4
+
+    int-to-byte v4, v4
+
+    aput-byte v4, v1, v2
+
+    :goto_1
+    if-ge v3, v5, :cond_1
+
+    aget-byte v4, v1, v2
+
+    add-int/lit8 v3, v3, -0x30
+
+    int-to-byte v3, v3
+
+    or-int/2addr v3, v4
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v1, v2
+
+    goto :goto_2
+
+    :cond_1
+    aget-byte v4, v1, v2
+
+    add-int/lit8 v3, v3, -0x57
+
+    int-to-byte v3, v3
+
+    or-int/2addr v3, v4
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v1, v2
+
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p1, Latakplugin/gotennaproag/p0;
+
+    invoke-direct {p1, v1}, Latakplugin/gotennaproag/p0;-><init>([B)V
+
+    invoke-virtual {p1}, Latakplugin/gotennaproag/p0;->l()Latakplugin/gotennaproag/y0;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract c(Latakplugin/gotennaproag/t0;Ljava/lang/String;)Latakplugin/gotennaproag/y0;
+.end method

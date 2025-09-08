@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faq>
+    <category name="faq_category_general">
+        <questions list="faq_default_category_general_questions" />
+    </category>
+    <category name="faq_category_antennas">
+        <questions list="faq_default_category_antennas_questions" />
+    </category>
+    <category name="faq_category_basic_tuning">
+        <questions list="faq_default_category_basic_tuning_questions" />
+    </category>
+    <category name="faq_category_gotenna_deployment_kit_gokit">
+        <questions list="faq_default_category_gotenna_deployment_kit_gokit_questions" />
+    </category>
+    <category name="faq_category_encryption">
+        <questions list="faq_default_category_encryption_questions" />
+    </category>
+    <category name="faq_category_1_3_gotenna_pro_app">
+        <questions list="faq_default_category_1_3_gotenna_pro_app_questions" />
+    </category>
+    <category name="faq_category_1_3_gotenna_pro_app_and_gotenna_deployment_kit_gokit">
+        <questions list="faq_default_category_1_3_gotenna_pro_app_and_gotenna_deployment_kit_gokit_questions" />
+    </category>
+</faq>

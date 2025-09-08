@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_device_config_main_0" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/lytConfigurationSet" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_device_config_setting" />
+            <include android:id="@id/lytFrequencySetsAndPower" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_device_config_setting" />
+            <include android:id="@id/lytEncryption" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_device_config_setting" />
+            <include android:id="@id/lytAutomaticPositionUpdates" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_device_config_setting" />
+            <include android:id="@id/lytMissionPreset" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_device_config_setting" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

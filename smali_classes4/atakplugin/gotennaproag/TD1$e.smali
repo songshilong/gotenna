@@ -1,0 +1,34 @@
+.class public final Latakplugin/gotennaproag/TD1$e;
+.super Latakplugin/gotennaproag/TD1$d;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Latakplugin/gotennaproag/TD1;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "e"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    new-instance v0, Latakplugin/gotennaproag/ek0;
+
+    new-instance v1, Latakplugin/gotennaproag/En1;
+
+    invoke-direct {v1}, Latakplugin/gotennaproag/En1;-><init>()V
+
+    invoke-direct {v0, v1}, Latakplugin/gotennaproag/ek0;-><init>(Latakplugin/gotennaproag/hN;)V
+
+    const-string v1, "TLS12withSHA256KDF"
+
+    invoke-direct {p0, v1, v0}, Latakplugin/gotennaproag/TD1$d;-><init>(Ljava/lang/String;Latakplugin/gotennaproag/fJ0;)V
+
+    return-void
+.end method

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_mission_preset_0" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <EditText android:id="@id/etPresetName" android:layout_marginTop="@dimen/item_margin_large" android:layout_marginBottom="@dimen/item_margin_large" android:hint="@string/device_config_mission_preset_1_default" android:maxLength="20" android:layout_marginStart="@dimen/page_margin" android:layout_marginEnd="@dimen/page_margin" style="@style/SsrEditText" />
+            <LinearLayout android:orientation="vertical" android:background="@color/item" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/powerLayout" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/powerTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_config_power" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" />
+                        <com.atakmap.android.gui.PluginSpinner android:id="@id/powerSpinner" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                <FrameLayout android:id="@id/pliLayout" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/pliTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_update_location" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" />
+                        <androidx.appcompat.widget.SwitchCompat android:id="@id/pliSwitch" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" style="@style/GtSwitch" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                <FrameLayout android:id="@id/intervalLayout" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <RadioButton android:id="@id/intervalRadioButton" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" style="@style/GtRadioButton" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/intervalTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_config_time" android:layout_centerInParent="true" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/intervalRadioButton" />
+                        <com.atakmap.android.gui.PluginSpinner android:id="@id/frequencySpinner" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                <FrameLayout android:id="@id/jitteringLayout" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/jitteringTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jittering_percentage" android:layout_centerInParent="true" android:layout_marginStart="57.0dip" android:layout_alignParentStart="true" />
+                        <com.atakmap.android.gui.PluginSpinner android:id="@id/jitteringSpinner" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+                <FrameLayout android:id="@id/distanceLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip">
+                        <RadioButton android:id="@id/distanceRadioButton" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" style="@style/GtRadioButton" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/distanceTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/distance" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/distanceRadioButton" />
+                        <com.atakmap.android.gui.PluginSpinner android:id="@id/distanceSpinner" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginTop="4.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+                        <TextView android:id="@id/distanceInfoTextView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="12.0dip" android:text="@string/distance_info" android:layout_below="@id/distanceSpinner" android:layout_marginEnd="16.0dip" android:layout_alignStart="@id/distanceTextView" />
+                        <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_below="@id/distanceInfoTextView" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

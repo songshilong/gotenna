@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:paddingBottom="6.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:paddingStart="18.0dip" android:paddingEnd="18.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="36.0dip">
+        <FrameLayout android:id="@id/deviceStatusStateLayout" android:layout_width="24.0dip" android:layout_height="24.0dip">
+            <ImageView android:id="@id/deviceStatusImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@null" />
+            <ProgressBar android:id="@id/deviceStatusPairingProgresBar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/deviceStatusTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="32.0dip" />
+        <FrameLayout android:id="@id/testButtonLayout" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="21.0dip" android:foreground="@drawable/ripple_background" android:minHeight="21.0dip" android:layout_marginStart="8.0dip">
+            <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/testButtonTextView" android:background="@drawable/button_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/paired_test_button" android:textAllCaps="true" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/batteryStatusLayout" android:layout_width="fill_parent" android:layout_height="36.0dip">
+        <ImageView android:id="@id/batteryStatusImageView" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@null" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/batteryStatusTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="32.0dip" />
+        <ImageView android:id="@id/battery_info_iv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@null" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/antennaQualityLayout" android:layout_width="fill_parent" android:layout_height="36.0dip">
+        <ImageView android:id="@id/antennaQualityImageView" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_antenna" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/antennaQualityTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/set_position" android:layout_marginStart="32.0dip" />
+        <FrameLayout android:id="@id/antennaInfoButtonLayout" android:layout_width="18.0dip" android:layout_height="18.0dip" android:foreground="@drawable/ripple_background" android:layout_marginStart="8.0dip">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/positionUpdateLayout" android:layout_width="fill_parent" android:layout_height="36.0dip" android:foreground="@drawable/ripple_background">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/positionUpdateImageView" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@null" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/positionUpdateTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/set_position" android:layout_marginStart="32.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/deviceSettingsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:minHeight="36.0dip">
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/ledStatusTextView" android:background="@drawable/button_border" android:layout_width="wrap_content" android:layout_height="21.0dip" android:foreground="?android:selectableItemBackground" android:text="@string/led_disabled" android:textAllCaps="true" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" />
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/listenOnlyModeTextView" android:background="@drawable/button_border" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:minHeight="21.0dip" android:text="@string/listen_only_mode_active" android:textAllCaps="true" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+</LinearLayout>

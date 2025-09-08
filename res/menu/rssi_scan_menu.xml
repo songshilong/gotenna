@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_clear_graphs" android:title="@string/rssi_clear" android:showAsAction="always" />
+    <item android:id="@id/action_toggle_legend" android:title="@string/rssi_toggle_legend" android:showAsAction="always" />
+</menu>

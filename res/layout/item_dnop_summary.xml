@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="22.0dip">
+        <TextView android:id="@id/dnopInfoCallsignTextView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@dimen/dnop_main_table_weight_callsign" style="@style/DnopTableHeaderCell" />
+        <View android:background="@color/divider_gray" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <TextView android:id="@id/dnopInfoLastSeenTextView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@dimen/dnop_main_table_weight_last_seen" style="@style/DnopTableCellText" />
+        <View android:background="@color/divider_gray" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <TextView android:id="@id/dnopInfoBatteryTextView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@dimen/dnop_main_table_weight_battery" style="@style/DnopTableCellText" />
+        <View android:background="@color/divider_gray" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <TextView android:id="@id/dnopInfoTxTextView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@dimen/dnop_main_table_weight_tx" style="@style/DnopTableCellText" />
+        <View android:background="@color/divider_gray" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <TextView android:id="@id/dnopInfoRxTextView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@dimen/dnop_main_table_weight_rx" style="@style/DnopTableCellText" />
+        <View android:background="@color/divider_gray" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:id="@id/dnopInfoRssiTextView" android:background="@color/green" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@dimen/dnop_main_table_weight_rssi" style="@style/DnopTableCellText" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View android:background="@color/divider_gray" android:layout_width="fill_parent" android:layout_height="0.20000005dip" />
+</androidx.appcompat.widget.LinearLayoutCompat>

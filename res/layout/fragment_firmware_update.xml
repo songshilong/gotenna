@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.gotenna.atak.views.GTActionBar android:id="@id/gtActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:background="@color/item" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/gtActionBar">
+        <LinearLayout android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="@dimen/button_height" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="32.0dip" android:paddingEnd="32.0dip">
+            <TextView android:textSize="24.0sp" android:textColor="@color/white" android:id="@id/firmwareVersionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/firmware_version_format" android:fontFamily="sans-serif-medium" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/firmwareDescriptionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/firmwareUpdateNowButtonLayout" android:background="@drawable/bg_blue_rounded" android:layout_width="fill_parent" android:layout_height="@dimen/button_height" android:foreground="@drawable/ripple_background" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/updateButtonTextView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/firmware_update_now" android:textAllCaps="true" android:fontFamily="sans-serif-medium" />
+    </FrameLayout>
+</RelativeLayout>

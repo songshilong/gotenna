@@ -1,0 +1,109 @@
+.class public Latakplugin/gotennaproag/FN;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field protected a:Latakplugin/gotennaproag/Aw1;
+
+.field protected b:[B
+
+
+# direct methods
+.method public constructor <init>(Latakplugin/gotennaproag/Aw1;[B)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p2, :cond_0
+
+    iput-object p1, p0, Latakplugin/gotennaproag/FN;->a:Latakplugin/gotennaproag/Aw1;
+
+    iput-object p2, p0, Latakplugin/gotennaproag/FN;->b:[B
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "\'signature\' cannot be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static d(Latakplugin/gotennaproag/aI1;Ljava/io/InputStream;)Latakplugin/gotennaproag/FN;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-static {p0}, Latakplugin/gotennaproag/pK1;->o0(Latakplugin/gotennaproag/aI1;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p1}, Latakplugin/gotennaproag/Aw1;->d(Ljava/io/InputStream;)Latakplugin/gotennaproag/Aw1;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    invoke-static {p1}, Latakplugin/gotennaproag/pK1;->I0(Ljava/io/InputStream;)[B
+
+    move-result-object p1
+
+    new-instance v0, Latakplugin/gotennaproag/FN;
+
+    invoke-direct {v0, p0, p1}, Latakplugin/gotennaproag/FN;-><init>(Latakplugin/gotennaproag/Aw1;[B)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a(Ljava/io/OutputStream;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Latakplugin/gotennaproag/FN;->a:Latakplugin/gotennaproag/Aw1;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Latakplugin/gotennaproag/Aw1;->a(Ljava/io/OutputStream;)V
+
+    :cond_0
+    iget-object v0, p0, Latakplugin/gotennaproag/FN;->b:[B
+
+    invoke-static {v0, p1}, Latakplugin/gotennaproag/pK1;->k1([BLjava/io/OutputStream;)V
+
+    return-void
+.end method
+
+.method public b()Latakplugin/gotennaproag/Aw1;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/FN;->a:Latakplugin/gotennaproag/Aw1;
+
+    return-object v0
+.end method
+
+.method public c()[B
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/FN;->b:[B
+
+    return-object v0
+.end method

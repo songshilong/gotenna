@@ -1,0 +1,1034 @@
+.class public final Latakplugin/gotennaproag/mE0$c;
+.super Latakplugin/gotennaproag/ph0;
+.source "SourceFile"
+
+# interfaces
+.implements Latakplugin/gotennaproag/mE0$d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Latakplugin/gotennaproag/mE0;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "c"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Latakplugin/gotennaproag/mE0$c$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Latakplugin/gotennaproag/ph0<",
+        "Latakplugin/gotennaproag/mE0$c;",
+        "Latakplugin/gotennaproag/mE0$c$a;",
+        ">;",
+        "Latakplugin/gotennaproag/mE0$d;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+.field public static final KEY_ID_FIELD_NUMBER:I = 0x3
+
+.field public static final OUTPUT_PREFIX_TYPE_FIELD_NUMBER:I = 0x4
+
+.field private static volatile PARSER:Latakplugin/gotennaproag/Z51; = null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Latakplugin/gotennaproag/Z51<",
+            "Latakplugin/gotennaproag/mE0$c;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final STATUS_FIELD_NUMBER:I = 0x2
+
+.field public static final TYPE_URL_FIELD_NUMBER:I = 0x1
+
+
+# instance fields
+.field private keyId_:I
+
+.field private outputPrefixType_:I
+
+.field private status_:I
+
+.field private typeUrl_:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Latakplugin/gotennaproag/mE0$c;
+
+    invoke-direct {v0}, Latakplugin/gotennaproag/mE0$c;-><init>()V
+
+    sput-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    const-class v1, Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v1, v0}, Latakplugin/gotennaproag/ph0;->b4(Ljava/lang/Class;Latakplugin/gotennaproag/ph0;)V
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Latakplugin/gotennaproag/ph0;-><init>()V
+
+    const-string v0, ""
+
+    iput-object v0, p0, Latakplugin/gotennaproag/mE0$c;->typeUrl_:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static A4(Latakplugin/gotennaproag/oj;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "data"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Latakplugin/gotennaproag/vu0;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0}, Latakplugin/gotennaproag/ph0;->L3(Latakplugin/gotennaproag/ph0;Latakplugin/gotennaproag/oj;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static B4(Latakplugin/gotennaproag/oj;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Latakplugin/gotennaproag/vu0;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0, p1}, Latakplugin/gotennaproag/ph0;->M3(Latakplugin/gotennaproag/ph0;Latakplugin/gotennaproag/oj;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static C4(Latakplugin/gotennaproag/Ts;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "input"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0}, Latakplugin/gotennaproag/ph0;->N3(Latakplugin/gotennaproag/ph0;Latakplugin/gotennaproag/Ts;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static D4(Latakplugin/gotennaproag/Ts;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0, p1}, Latakplugin/gotennaproag/ph0;->O3(Latakplugin/gotennaproag/ph0;Latakplugin/gotennaproag/Ts;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static E4(Ljava/io/InputStream;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "input"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0}, Latakplugin/gotennaproag/ph0;->P3(Latakplugin/gotennaproag/ph0;Ljava/io/InputStream;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static F4(Ljava/io/InputStream;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0, p1}, Latakplugin/gotennaproag/ph0;->Q3(Latakplugin/gotennaproag/ph0;Ljava/io/InputStream;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static G4(Ljava/nio/ByteBuffer;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "data"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Latakplugin/gotennaproag/vu0;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0}, Latakplugin/gotennaproag/ph0;->R3(Latakplugin/gotennaproag/ph0;Ljava/nio/ByteBuffer;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static H4(Ljava/nio/ByteBuffer;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Latakplugin/gotennaproag/vu0;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0, p1}, Latakplugin/gotennaproag/ph0;->S3(Latakplugin/gotennaproag/ph0;Ljava/nio/ByteBuffer;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static I4([B)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "data"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Latakplugin/gotennaproag/vu0;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0}, Latakplugin/gotennaproag/ph0;->T3(Latakplugin/gotennaproag/ph0;[B)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static J4([BLatakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Latakplugin/gotennaproag/vu0;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0, p1}, Latakplugin/gotennaproag/ph0;->U3(Latakplugin/gotennaproag/ph0;[BLatakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static K4()Latakplugin/gotennaproag/Z51;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Latakplugin/gotennaproag/Z51<",
+            "Latakplugin/gotennaproag/mE0$c;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-virtual {v0}, Latakplugin/gotennaproag/ph0;->getParserForType()Latakplugin/gotennaproag/Z51;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private L4(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    iput p1, p0, Latakplugin/gotennaproag/mE0$c;->keyId_:I
+
+    return-void
+.end method
+
+.method private M4(Latakplugin/gotennaproag/E11;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Latakplugin/gotennaproag/E11;->getNumber()I
+
+    move-result p1
+
+    iput p1, p0, Latakplugin/gotennaproag/mE0$c;->outputPrefixType_:I
+
+    return-void
+.end method
+
+.method private N4(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    iput p1, p0, Latakplugin/gotennaproag/mE0$c;->outputPrefixType_:I
+
+    return-void
+.end method
+
+.method private O4(Latakplugin/gotennaproag/JD0;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Latakplugin/gotennaproag/JD0;->getNumber()I
+
+    move-result p1
+
+    iput p1, p0, Latakplugin/gotennaproag/mE0$c;->status_:I
+
+    return-void
+.end method
+
+.method private P4(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    iput p1, p0, Latakplugin/gotennaproag/mE0$c;->status_:I
+
+    return-void
+.end method
+
+.method private Q4(Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Latakplugin/gotennaproag/mE0$c;->typeUrl_:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method private R4(Latakplugin/gotennaproag/oj;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
+    invoke-static {p1}, Latakplugin/gotennaproag/X0;->Y(Latakplugin/gotennaproag/oj;)V
+
+    invoke-virtual {p1}, Latakplugin/gotennaproag/oj;->x0()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Latakplugin/gotennaproag/mE0$c;->typeUrl_:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic e4()Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    return-object v0
+.end method
+
+.method static synthetic f4(Latakplugin/gotennaproag/mE0$c;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->Q4(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic g4(Latakplugin/gotennaproag/mE0$c;Latakplugin/gotennaproag/E11;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->M4(Latakplugin/gotennaproag/E11;)V
+
+    return-void
+.end method
+
+.method static synthetic h4(Latakplugin/gotennaproag/mE0$c;)V
+    .locals 0
+
+    invoke-direct {p0}, Latakplugin/gotennaproag/mE0$c;->s4()V
+
+    return-void
+.end method
+
+.method static synthetic i4(Latakplugin/gotennaproag/mE0$c;)V
+    .locals 0
+
+    invoke-direct {p0}, Latakplugin/gotennaproag/mE0$c;->u4()V
+
+    return-void
+.end method
+
+.method static synthetic j4(Latakplugin/gotennaproag/mE0$c;Latakplugin/gotennaproag/oj;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->R4(Latakplugin/gotennaproag/oj;)V
+
+    return-void
+.end method
+
+.method static synthetic k4(Latakplugin/gotennaproag/mE0$c;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->P4(I)V
+
+    return-void
+.end method
+
+.method static synthetic l4(Latakplugin/gotennaproag/mE0$c;Latakplugin/gotennaproag/JD0;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->O4(Latakplugin/gotennaproag/JD0;)V
+
+    return-void
+.end method
+
+.method static synthetic m4(Latakplugin/gotennaproag/mE0$c;)V
+    .locals 0
+
+    invoke-direct {p0}, Latakplugin/gotennaproag/mE0$c;->t4()V
+
+    return-void
+.end method
+
+.method static synthetic n4(Latakplugin/gotennaproag/mE0$c;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->L4(I)V
+
+    return-void
+.end method
+
+.method static synthetic o4(Latakplugin/gotennaproag/mE0$c;)V
+    .locals 0
+
+    invoke-direct {p0}, Latakplugin/gotennaproag/mE0$c;->q4()V
+
+    return-void
+.end method
+
+.method static synthetic p4(Latakplugin/gotennaproag/mE0$c;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Latakplugin/gotennaproag/mE0$c;->N4(I)V
+
+    return-void
+.end method
+
+.method private q4()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Latakplugin/gotennaproag/mE0$c;->keyId_:I
+
+    return-void
+.end method
+
+.method private s4()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Latakplugin/gotennaproag/mE0$c;->outputPrefixType_:I
+
+    return-void
+.end method
+
+.method private t4()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Latakplugin/gotennaproag/mE0$c;->status_:I
+
+    return-void
+.end method
+
+.method private u4()V
+    .locals 1
+
+    invoke-static {}, Latakplugin/gotennaproag/mE0$c;->v4()Latakplugin/gotennaproag/mE0$c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Latakplugin/gotennaproag/mE0$c;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Latakplugin/gotennaproag/mE0$c;->typeUrl_:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static v4()Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    return-object v0
+.end method
+
+.method public static w4()Latakplugin/gotennaproag/mE0$c$a;
+    .locals 1
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-virtual {v0}, Latakplugin/gotennaproag/ph0;->F2()Latakplugin/gotennaproag/ph0$b;
+
+    move-result-object v0
+
+    check-cast v0, Latakplugin/gotennaproag/mE0$c$a;
+
+    return-object v0
+.end method
+
+.method public static x4(Latakplugin/gotennaproag/mE0$c;)Latakplugin/gotennaproag/mE0$c$a;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "prototype"
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-virtual {v0, p0}, Latakplugin/gotennaproag/ph0;->X2(Latakplugin/gotennaproag/ph0;)Latakplugin/gotennaproag/ph0$b;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c$a;
+
+    return-object p0
+.end method
+
+.method public static y4(Ljava/io/InputStream;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "input"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0}, Latakplugin/gotennaproag/ph0;->J3(Latakplugin/gotennaproag/ph0;Ljava/io/InputStream;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+.method public static z4(Ljava/io/InputStream;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/mE0$c;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "input",
+            "extensionRegistry"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {v0, p0, p1}, Latakplugin/gotennaproag/ph0;->K3(Latakplugin/gotennaproag/ph0;Ljava/io/InputStream;Latakplugin/gotennaproag/UZ;)Latakplugin/gotennaproag/ph0;
+
+    move-result-object p0
+
+    check-cast p0, Latakplugin/gotennaproag/mE0$c;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public J()Latakplugin/gotennaproag/E11;
+    .locals 1
+
+    iget v0, p0, Latakplugin/gotennaproag/mE0$c;->outputPrefixType_:I
+
+    invoke-static {v0}, Latakplugin/gotennaproag/E11;->a(I)Latakplugin/gotennaproag/E11;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Latakplugin/gotennaproag/E11;->v:Latakplugin/gotennaproag/E11;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public U()I
+    .locals 1
+
+    iget v0, p0, Latakplugin/gotennaproag/mE0$c;->outputPrefixType_:I
+
+    return v0
+.end method
+
+.method public W()I
+    .locals 1
+
+    iget v0, p0, Latakplugin/gotennaproag/mE0$c;->keyId_:I
+
+    return v0
+.end method
+
+.method public X()I
+    .locals 1
+
+    iget v0, p0, Latakplugin/gotennaproag/mE0$c;->status_:I
+
+    return v0
+.end method
+
+.method protected final a3(Latakplugin/gotennaproag/ph0$i;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "method",
+            "arg0",
+            "arg1"
+        }
+    .end annotation
+
+    sget-object p2, Latakplugin/gotennaproag/mE0$a;->a:[I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aget p1, p2, p1
+
+    const/4 p2, 0x0
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    return-object p2
+
+    :pswitch_1
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    sget-object p1, Latakplugin/gotennaproag/mE0$c;->PARSER:Latakplugin/gotennaproag/Z51;
+
+    if-nez p1, :cond_1
+
+    const-class p2, Latakplugin/gotennaproag/mE0$c;
+
+    monitor-enter p2
+
+    :try_start_0
+    sget-object p1, Latakplugin/gotennaproag/mE0$c;->PARSER:Latakplugin/gotennaproag/Z51;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Latakplugin/gotennaproag/ph0$c;
+
+    sget-object p3, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-direct {p1, p3}, Latakplugin/gotennaproag/ph0$c;-><init>(Latakplugin/gotennaproag/ph0;)V
+
+    sput-object p1, Latakplugin/gotennaproag/mE0$c;->PARSER:Latakplugin/gotennaproag/Z51;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p2
+
+    goto :goto_2
+
+    :goto_1
+    monitor-exit p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :cond_1
+    :goto_2
+    return-object p1
+
+    :pswitch_3
+    sget-object p1, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    return-object p1
+
+    :pswitch_4
+    const-string p1, "typeUrl_"
+
+    const-string p2, "status_"
+
+    const-string p3, "keyId_"
+
+    const-string v0, "outputPrefixType_"
+
+    filled-new-array {p1, p2, p3, v0}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string p2, "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u000c\u0003\u000b\u0004\u000c"
+
+    sget-object p3, Latakplugin/gotennaproag/mE0$c;->DEFAULT_INSTANCE:Latakplugin/gotennaproag/mE0$c;
+
+    invoke-static {p3, p2, p1}, Latakplugin/gotennaproag/ph0;->F3(Latakplugin/gotennaproag/MQ0;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_5
+    new-instance p1, Latakplugin/gotennaproag/mE0$c$a;
+
+    invoke-direct {p1, p2}, Latakplugin/gotennaproag/mE0$c$a;-><init>(Latakplugin/gotennaproag/mE0$a;)V
+
+    return-object p1
+
+    :pswitch_6
+    new-instance p1, Latakplugin/gotennaproag/mE0$c;
+
+    invoke-direct {p1}, Latakplugin/gotennaproag/mE0$c;-><init>()V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public bridge synthetic getDefaultInstanceForType()Latakplugin/gotennaproag/MQ0;
+    .locals 1
+
+    invoke-super {p0}, Latakplugin/gotennaproag/ph0;->k3()Latakplugin/gotennaproag/ph0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getStatus()Latakplugin/gotennaproag/JD0;
+    .locals 1
+
+    iget v0, p0, Latakplugin/gotennaproag/mE0$c;->status_:I
+
+    invoke-static {v0}, Latakplugin/gotennaproag/JD0;->a(I)Latakplugin/gotennaproag/JD0;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Latakplugin/gotennaproag/JD0;->s:Latakplugin/gotennaproag/JD0;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public bridge synthetic newBuilderForType()Latakplugin/gotennaproag/MQ0$a;
+    .locals 1
+
+    invoke-super {p0}, Latakplugin/gotennaproag/ph0;->E3()Latakplugin/gotennaproag/ph0$b;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public q()Latakplugin/gotennaproag/oj;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/mE0$c;->typeUrl_:Ljava/lang/String;
+
+    invoke-static {v0}, Latakplugin/gotennaproag/oj;->L(Ljava/lang/String;)Latakplugin/gotennaproag/oj;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public r()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Latakplugin/gotennaproag/mE0$c;->typeUrl_:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic toBuilder()Latakplugin/gotennaproag/MQ0$a;
+    .locals 1
+
+    invoke-super {p0}, Latakplugin/gotennaproag/ph0;->d4()Latakplugin/gotennaproag/ph0$b;
+
+    move-result-object v0
+
+    return-object v0
+.end method

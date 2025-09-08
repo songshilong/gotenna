@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/gt_deployment_pack_list_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/deploymentPackListItemIconFrame" android:background="@color/black_33" android:layout_width="wrap_content" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHeight_min="48.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_min="48.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/deploymentPackListItemIcon" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/text_size_small" android:id="@id/deploymentPackListItemText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginHorizontal="8.0dip" app:layout_constraintBottom_toBottomOf="@id/deploymentPackListItemIconFrame" app:layout_constraintEnd_toStartOf="@id/arrow" app:layout_constraintStart_toEndOf="@id/deploymentPackListItemIconFrame" app:layout_constraintTop_toTopOf="@id/deploymentPackListItemIconFrame" />
+    <ImageView android:id="@id/arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_forward" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toBottomOf="@id/deploymentPackListItemText" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/deploymentPackListItemText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/frequencyListView" android:background="@color/background" android:paddingBottom="@dimen/button_height" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/lookingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/looking_frequencies" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/frequencyErrorLayout" android:background="@color/red_button_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_frequencies" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:letterSpacing="0.04" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/frequencyNextButtonLayout" android:background="@color/onboarding_button_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/button_height" android:foreground="@drawable/ripple_background" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/frequency_next_button" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:letterSpacing="0.04" />
+    </FrameLayout>
+</RelativeLayout>

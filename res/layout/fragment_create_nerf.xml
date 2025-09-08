@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/vwActionBar" layout="@layout/view_action_bar_with_primary_button" />
+    <ScrollView android:background="@color/background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/item_margin" android:paddingBottom="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/headerTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nerf_send" android:layout_marginStart="@dimen/page_margin" android:layout_marginEnd="@dimen/page_margin" style="@style/GtTypography.HeaderTitle" />
+            <TextView android:id="@id/targetLocationHeaderTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/page_margin" android:text="@string/nerf_target_location" android:layout_marginStart="@dimen/page_margin" android:layout_marginEnd="@dimen/page_margin" style="@style/GtTypography.HeaderTitle" />
+            <EditText android:textColorHint="@color/divider_gray" android:id="@id/targetLocationEditText" android:layout_width="fill_parent" android:layout_marginTop="@dimen/form_field_vertical_margin" android:hint="@string/nerf_tap_map" android:inputType="none" android:layout_marginStart="@dimen/form_field_margin_start" android:layout_marginEnd="@dimen/form_field_margin_end" style="@style/FormEditText" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/green" android:id="@id/clearLocationTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/page_margin" android:text="@string/ssr_send_label_clear_location" android:layout_marginStart="@dimen/form_field_margin_start" />
+            <EditText android:textColorHint="@color/divider_gray" android:id="@id/systemTargetNameEditText" android:layout_width="fill_parent" android:layout_marginTop="@dimen/form_field_vertical_margin" android:hint="@string/nerf_system_target_name" android:maxLength="15" android:layout_marginStart="@dimen/form_field_margin_start" android:layout_marginEnd="@dimen/form_field_margin_end" style="@style/FormEditText" />
+            <View android:id="@id/effectDescriptionTopDivider" android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginTop="@dimen/form_field_vertical_margin" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.atakmap.android.gui.PluginSpinner android:id="@id/effectDescriptionSpinner" android:background="@color/item" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" style="@style/ATAKSpinner" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_spinner_caret" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:id="@id/effectDescriptionBottomDivider" android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <View android:id="@id/frequencyBandTopDivider" android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginTop="@dimen/form_field_vertical_margin" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.atakmap.android.gui.PluginSpinner android:id="@id/frequencyBandSpinner" android:background="@color/item" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height" android:layout_marginTop="@dimen/form_field_vertical_margin" style="@style/ATAKSpinner" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_spinner_caret" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:id="@id/frequencyBandBottomDivider" android:background="@color/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <EditText android:textColorHint="@color/divider_gray" android:id="@id/remarksEditText" android:layout_width="fill_parent" android:layout_marginTop="@dimen/page_margin" android:hint="@string/nerf_remarks" android:maxLength="25" android:layout_marginStart="@dimen/form_field_margin_start" android:layout_marginEnd="@dimen/form_field_margin_end" style="@style/FormEditText" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" android:text="@string/ssr_send_category_dtg" android:layout_marginStart="@dimen/form_field_margin_start" style="@style/GtTypography.HeaderTitle" />
+            <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/form_field_margin_start" android:layout_marginEnd="@dimen/form_field_margin_end">
+                <EditText android:id="@id/dtgStartEditText" android:focusable="false" android:clickable="true" android:layout_width="0.0dip" android:hint="@string/ssr_send_hint_dtg_start" android:layout_weight="1.0" android:inputType="none" style="@style/FormEditText" />
+                <View android:layout_width="12.0dip" android:layout_height="wrap_content" />
+                <EditText android:id="@id/dtgEndEditText" android:focusable="false" android:clickable="true" android:layout_width="0.0dip" android:hint="@string/ssr_send_hint_dtg_end" android:layout_weight="1.0" android:inputType="none" style="@style/FormEditText" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
